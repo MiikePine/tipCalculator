@@ -26,7 +26,7 @@ function App() {
   const handleReset = () => {
     setBill(0);
     setTipPercentage(0);
-    setNumberOfPeople(1);
+    setNumberOfPeople(0);
   };
 
 
@@ -41,8 +41,8 @@ function App() {
           <div className='md:flex bg-white p-8 rounded-3xl md:rounded-xl'>
                 <div className=' '>
                     <div>
-                      <p  className='text-[#8a9293] text-xl md:text-base font font-space-mono'>Bill</p>
-                      <input placeholder='$' className='bg-[#f2f9fb] p-2  rounded-md w-full text-right text-[#00494D]  font-space-mono text-3xl md:text-xl font-bold' onChange={handleBillChange} ></input>
+                      <p  className='text-[#01464b]  text-xl md:text-base font font-space-mono'>Bill</p>
+                      <input placeholder='$' className='bg-[#f2f9fb] p-2  rounded-md w-full text-right text-[#00494D]  font-space-mono text-3xl md:text-xl font-bold' onChange={handleBillChange} value={bill} /> 
                     </div>
 
                     
@@ -95,10 +95,10 @@ function App() {
                        </div>      
                     </div>
               <div className='px-8 py-2'>
-                <button className='bg-[#29c0ab] text-[#06474d] p-2 mb-6 rounded-md w-full text-2xl font-bold my-10 py-2x'> RESET</button>  
+                <button className='bg-[#29c0ab] text-[#06474d] p-2 mb-6 rounded-md w-full text-2xl font-bold my-10 py-2x' onClick={handleReset}> RESET</button>  
               </div>
           </div>
-
+ 
         </div>
       </div>
     
