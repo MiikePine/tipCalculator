@@ -6,7 +6,7 @@ function App() {
 
   const [bill, setBill] = useState(0);
   const [tipPercentage, setTipPercentage] = useState(0);
-  const [numberOfPeople, setNumberOfPeople] = useState(1);
+  const [numberOfPeople, setNumberOfPeople] = useState(0);
 
   const tipAmount = (bill * tipPercentage) / 100 / numberOfPeople;
   const totalAmountPerPerson = bill / numberOfPeople + tipAmount;
@@ -39,7 +39,7 @@ function App() {
 
         
           <div className='md:flex bg-white p-8 rounded-3xl md:rounded-xl'>
-                <div className=' '>
+                <div>
                     <div>
                       <p  className='text-[#01464b]  text-xl md:text-base font font-space-mono'>Bill</p>
                       <input placeholder='$' className='bg-[#f2f9fb] p-2  rounded-md w-full text-right text-[#00494D]  font-space-mono text-3xl md:text-xl font-bold' onChange={handleBillChange} value={bill} /> 
@@ -74,7 +74,7 @@ function App() {
 
 
           <div className='bg-[#01464b] rounded-xl mx-0 md:ml-10 w-full md:w-2/3 flex flex-col justify-between '>
-                    <div className="" >
+                    <div>
                       <div className='flex justify-between px-8 mt-8'>
                           <div className=''>
                                 <p className="text-[#b2cfcf] font-space-mono font-bold text-xl md:text-base" >Tip Amount</p>
